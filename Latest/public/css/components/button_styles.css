@@ -1,0 +1,121 @@
+.form-btn {
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 100%;
+    height: 45px;
+    padding-top: 0px;
+    padding-left: 15px;
+    font-size: 15px;
+    outline: none;
+    display: block;
+    font-family: FredokaOne-Regular;
+}
+
+.form-btn:hover {
+    border: 1px solid #000;
+    background-color: #ff007f;
+    transition: 1s;
+    border-radius: 5px;
+    width: 100%;
+    height: 45px;
+    padding-top: 0px;
+    padding-left: 15px;
+    font-size: 15px;
+    outline: none;
+    display: block;
+}
+
+.post-btn {
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 100%;
+    height: 45px;
+    padding-top: 0px;
+    padding-left: 15px;
+    font-size: 15px;
+    outline: none;
+    display: block;
+    font-family: FredokaOne-Regular;
+}
+
+.post-btn:hover {
+    border: 1px solid #000;
+    background-color: #ff007f;
+    transition: 1s;
+    border-radius: 5px;
+    width: 100%;
+    height: 45px;
+    padding-top: 0px;
+    padding-left: 15px;
+    font-size: 15px;
+    outline: none;
+    display: block;
+}
+
+.post-create-btn {
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 100%;
+    height: 45px;
+    padding-top: 0px;
+    padding-left: 15px;
+    font-size: 15px;
+    outline: none;
+    display: block;
+    font-family: FredokaOne-Regular;
+}
+
+.post-create-btn:hover {
+    border: 1px solid #000;
+    background-color: #ff007f;
+    transition: 1s;
+    border-radius: 5px;
+    width: 100%;
+    height: 45px;
+    padding-top: 0px;
+    padding-left: 15px;
+    font-size: 15px;
+    outline: none;
+    display: block;
+}
+
+
+.post-control-btn1 {
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 100%;
+    height: 45px;
+    margin-left: 20px;
+    
+    font-size: 15px;
+    outline: none;
+    display: block;
+    font-family: FredokaOne-Regular;
+}
+
+.post-control-btn1:hover {
+    border: 1px solid #000;
+    background-color: #ff007f;
+    transition: 1s;
+    
+}
+
+.post-control-btn2 {
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 100%;
+    height: 45px;
+    margin-left: 20px;
+    
+    font-size: 15px;
+    outline: none;
+    display: block;
+    font-family: FredokaOne-Regular;
+}
+
+.post-control-btn2:hover {
+    border: 1px solid #000;
+    background-color: #fd0101;
+    transition: 1s;
+   
+}

@@ -1,0 +1,175 @@
+/* INDEX */
+
+.post-index-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    
+    background-color: darkgrey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    width: 700px;
+    border-bottom: 1px solid #ff007f;
+    border-radius: 5px;
+}
+
+.post-index-container .post-header {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    border-bottom: 1px solid #ff007f;
+    
+}
+
+.post-index-container .post-header .post-user-profile-image {
+    padding-right: 5px;
+}
+
+.post-index-container .post-header .post-user-profile-image img{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+
+.post-index-container .post-header .post-user-username {
+    padding-right: 15px;
+    font-weight: 600;
+    color: #000;
+}
+
+.post-index-container .post-header .post-created-at {
+    font-weight: 600;
+    color: #c1c1c1;
+}
+
+.post-index-container .post-body {
+    padding: 5px;
+    border-bottom: 1px solid #ff007f;
+}
+
+.post-index-container .post-body .post-title {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.post-index-container .post-body .post-content {
+    padding: 5px;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.post-index-container .post-body .post-image img{
+    max-height: 400px;
+    max-width: 99%;
+    border-radius: 5px;
+    border: 1px solid #000;
+
+}
+
+.post-index-container .post-footer {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    align-items: right;
+    justify-content: right;
+    
+}
+
+.post-index-container .post-footer .post-likes {
+    padding-right: 15px;
+    color: #00a300;
+    cursor: pointer;
+}
+
+.post-index-container .post-footer .post-likes:active {
+    background-color: #6efc6e
+}
+
+.post-index-container .post-footer .post-likes img {
+    height: 40px;
+    width: 40px;
+}
+
+.post-index-container .post-footer .post-dislikes {
+    padding-left: 15px;
+    color: #d10000;
+    cursor: pointer;
+}
+
+.post-index-container .post-footer .post-dislikes:active {
+    background-color: #fc6e6e
+}
+
+.post-index-container .post-footer .post-dislikes img {
+    height: 40px;
+    width: 40px;
+}
+
+.post-control-btns {
+    display: flex;
+    flex-direction: row;
+}
+
+/* CREATE */
+
+.post-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: darkgrey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    width: 700px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.post-container textarea {
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 100%;
+    height: 200px;
+    padding-top: 15px;
+    padding-left: 15px;
+    font-size: 15px;
+    outline: none;
+    display: block;
+}
+
+.post-container textarea:focus {
+    border: 1px solid #ff007f;
+}
+
+.post-container .upper {
+    display: flex;
+    flex-direction: row;
+}
+
+.post-container .upper .left {
+    width: 100%;
+}
+
+.post-container .upper .right {
+    width: fit-content;
+    opacity: 0.8;
+}
+
+.post-container .upper .right:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.post-container .upper .right img {
+    width: 40px;
+    height: 40px;
+    padding: 3px;
+}
+
+.post-container .post-image img{
+    height: 200px;
+    border-radius: 5px;
+    border: 1px solid #000;
+
+}
+

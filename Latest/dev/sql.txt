@@ -1,0 +1,71 @@
+
+CREATE TABLE Users (
+    id INT AUTO_INCREMENT,
+    profile_image VARCHAR(255),
+    username VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255),
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id)
+);
+
+CREATE TABLE ProfileTypes (
+    id INT AUTO_INCREMENT,
+    user_id INT,
+    profile_type ENUM ('male','female','transgender','crossdresser','mfcouple','ffcouple','mmcouple','tgcouple','cdcouple') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL;
+    looking_to_meet SET ('male','female','transgender','crossdresser','mfcouple','ffcouple','mmcouple','tgcouple','cdcouple') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL;
+    PRIMARY KEY(id),
+    FOREIGN KEY(user_id) REFERENCES Users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE Posts (
+    id INT AUTO_INCREMENT,
+    user_id INT,
+    image VARCHAR (255),
+    title VARCHAR(255),
+    body TEXT,
+    likes INT DEFAULT 0,
+    dislikes INT DEFAULT 0,
+    views INT DEFAULT 0,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id),
+    FOREIGN KEY(user_id) REFERENCES Users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE PostInteractions (
+    interaction_id INT AUTO_INCREMENT,
+    post_id INT DEFAULT 0,
+    user_id INT DEFAULT 0,
+    interaction VARCHAR(255),
+    PRIMARY KEY(interaction_id),
+    FOREIGN KEY(post_id) REFERENCES Posts(id) ON DELETE CASCADE,
+    FOREIGN KEY(user_id) REFERENCES Users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE PostInteractions (
+    id INT AUTO_INCREMENT,
+    post_id INT NOT NULL DEFAULT 0,
+    user_id INT NOT NULL DEFAULT 0,
+    interaction VARCHAR(255),
+    PRIMARY KEY(id),
+    FOREIGN KEY(post_id) REFERENCES Posts(id) ON DELETE CASCADE,
+    FOREIGN KEY(user_id) REFERENCES Users(id) ON DELETE CASCADE
+);
+
+CREATE VIEW v_posts AS
+    SELECT 
+    Posts.id as post_id,
+    Users.id as user_id,
+    Users.profile_image as profile_image,
+    Users.Username as user_username,
+    Posts.image as image,
+    Posts.title as title,
+    Posts.body as body,
+    Posts.likes as likes,
+    Posts.dislikes as dislikes,
+    Posts.views as views,
+    Posts.created_at as post_created_at,
+    Users.created_at as user_created_at
+    FROM Posts INNER JOIN Users
+    ON Posts.user_id = Users.id
+    ORDER BY Posts.created_at DESC;
